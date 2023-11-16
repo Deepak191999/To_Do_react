@@ -9,9 +9,9 @@ function Todo({ todoData,isFinished,changeFinished,onDelete,onEdit }) {
   <div>
     {/* checkbox */}
     <input type="checkbox" checked={finished} onChange={(e) => {
-                                                     setFinished(e.target.checked)
-                                                     changeFinished(e.target.checked)}} 
-     />
+      setFinished(e.target.checked);
+      changeFinished(e.target.checked);
+    }} />
 
      {/* text */}
      {(isEditing) ? <input type="text" value={editText} onChange={e => setEditText(e.target.value)} /> : <span>{todoData}</span>}
